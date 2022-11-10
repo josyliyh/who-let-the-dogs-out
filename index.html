@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who Let the Dogs Out</title>
+        <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<link rel="stylesheet" href="styles/normalize-fwd.css">
+<link rel="stylesheet" href="styles/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Rampart+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>Who Let the Dogs Out</h1>
+    </header>
+
+<div id="startscreen" class="screen">
+    <div class="center">
+            <form id="form">
+                <p>Player's Name:</p>
+            <input type="text" id="name" value="Your name">
+            <button id="btn" type="reset" class="btn">Reset Name </button>
+            </form>
+            <br>
+
+            <button id="joingamebtn" type="button" class="btn">Start </button>
+            <button type="button" class="btn" id="setuphelp">Help</button>
+
+        <!-- Modal -->
+    <div class="modal fade" id="startModal" role="dialog">
+        <div class="modal-dialog">
+  
+    <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+      
+        <h4 class="modal-title">Instruction</h4>
+                </div>
+                <div class="modal-body">
+                    <article><h3>Setup</h3>
+                        <p>1. Enter your Name</p>
+                        <p>2. Choose easy or hard mode</p>
+                        <p>3. Press Start to start the game</p>
+                        <h3>Rule</h3>
+                        <p>1. Click the dog from the gameboard to match the target</p>
+                        <p>2. You will get 1 point when you choose the right dog</p>
+                        <p>3. You will lose 1 point if you choose the wrong dog</p>
+                        
+                    </article>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="closebtn" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                <button id="easytohardbtn" type="button" class="btn">Easy Mode </button>
+                <button id="hardtoeasybtn" type="button" class="btn">Hard Mode </button>
+            
+    </div>
+</div>
+    
+    
+    <div id="gamescreen" class="screen">
+        <div class="center">
+        <div id="scoreboard">
+            <div id="playerboard">
+                <p>Player:</p> 
+                <div id="display">Player</div>
+                <p>Score:</p> 
+                <div class="point">0</div>
+            </div>
+                <div id="container">
+                        <div id="timer">
+                        <span id='mins'>00</span>:<span id='secs'>00</span>
+                        </div>
+                <div id="timerbtn">
+
+                    <div class="progress" style="height: 20px;">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
+                    
+                    <button id="startbtn" class="timerbtn btn">Start</button>
+                    <button id="stopbtn" class="timerbtn btn">Pause</button>
+    
+                    </div>
+                </div>
+                
+        </div>
+        <div id="gameboard">
+            <div id="targetcontainer">
+                
+                <div id="newtarget"> </div>
+                <p>Target</p>
+            </div>
+             <div id="dogcontainer">
+                <div id="dog1" class="dog">
+                    <img src="media/dog1.png" alt="dog1">
+                </div>
+                <div id="dog2" class="dog">
+                    <img src="media/dog2.png" alt="dog2">
+                </div>
+                <div id="dog3" class="dog">
+                    <img src="media/dog3.png" alt="dog3">
+                </div>
+                <div id="dog4" class="dog">
+                    <img src="media/dog4.png" alt="dog4">
+                </div>
+                <div id="dog5" class="dog">
+                    <img src="media/dog5.png" alt="dog5">
+                </div>
+                <div id="dog6" class="dog">
+                    <img src="media/dog6.png" alt="dog6">
+                </div>
+                <div id="dog7" class="dog">
+                    <img src="media/dog7.png" alt="dog7">
+                </div>
+                <div id="dog8" class="dog">
+                    <img src="media/dog8.png" alt="dog8">
+                </div>
+                <div id="dog9" class="dog">
+                    <img src="media/dog9.png" alt="dog9">
+                </div>
+                <div id="dog10" class="dog">
+                    <img src="media/dog10.png" alt="dog10">
+                </div>
+                <div id="dog11" class="dog">
+                    <img src="media/dog11.png" alt="dog11">
+                </div>
+                <div id="dog12" class="dog">
+                    <img src="media/dog12.png" alt="dog12">
+                </div>
+                <div id="dog13" class="dog">
+                    <img src="media/dog13.png" alt="dog13">
+                </div>
+                <div id="dog14" class="dog">
+                    <img src="media/dog14.png" alt="dog14">
+                </div>
+                <div id="dog15" class="dog">
+                    <img src="media/dog15.png" alt="dog15">
+                </div>
+            </div>   
+            </div>
+     </div>
+    </div>
+</div>
+    
+    <div id="gameoverscreen" class="screen">
+        <div class="center">
+        <h2>Time's up!<div id="finalplayer"></div></h2>
+        <br>
+       <div id="points">
+           <p>You have</p> <div class="point">0</div> <p>points.</p>
+        </div>
+        <br>
+        <button type="button" class="btn" id="restartbtn">Restart</button>
+        <button type="button" class="btn" id="exitbtn">Exit</button>
+    </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+   <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+<script src="scripts/script.js"></script>
+</body>
+</html>

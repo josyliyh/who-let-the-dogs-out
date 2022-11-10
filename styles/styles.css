@@ -1,0 +1,218 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic (CALLED IN ANOTHER FILE)
+	- Normalize
+	- Box sizing
+	- Media width
+# Base
+	- Typography
+	- Elements
+	- Links
+# Layouts
+# Components
+	- Header
+	- Main
+	- Footer
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+
+/* Typography
+--------------------------------------------- */
+body {
+	font-family: 'Inconsolata', monospace;
+	color:#8C513B
+}
+
+h1{
+	font-family: 'Rampart One', cursive;	
+}
+
+p {
+	
+}
+
+
+/* Elements
+--------------------------------------------- */
+ul {
+	
+}
+
+ol {
+	
+}
+
+dl {
+	
+}
+
+figure {
+	
+}
+
+table {
+	
+}
+
+/* Links
+--------------------------------------------- */
+a {
+	
+}
+
+a:visited {
+	
+}
+
+a:hover {
+	
+}
+
+a:focus {
+	
+}
+
+a:active {
+	
+}
+
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+
+/* Header
+--------------------------------------------- */
+
+
+/* Main
+--------------------------------------------- */
+body {
+	background-color: #F2E3D0;
+	text-align: center;
+}
+.screen {
+	max-width: 1080px;
+	height: 580px;
+	margin: auto;
+	
+}
+#startscreen, #gameoverscreen {
+	padding: 2rem;
+}
+@media only screen and (min-width: 1080px) {
+	.screen {
+		border: #8C513B 1px solid;
+	}
+  }
+
+.center{
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+/* startScreen */
+input[type="text"]
+{
+  width: 30%;
+  border: none;
+  background-color: #F2BF5E;
+  padding: 1.2rem;
+  border-radius: 0.2rem;
+  color: grey;
+}
+article {
+	text-align: left;
+}
+
+/* gameScreen */
+#playerboard{
+	display: flex;
+	justify-content: space-between;
+	width: 30%;
+	margin: auto;
+}
+.progress {
+	width: 50%;
+	margin: auto;
+}
+
+#scoreboard #timer{
+	margin: auto;
+	width: fit-content;
+}
+#timerbtn {
+	display: flex;
+	width: 80%;
+}
+
+#gameboard{
+	display: grid;
+	grid-template-columns: 21.5% auto;
+	justify-items: center;
+}
+#dogcontainer {
+	display: flex;
+	flex-wrap: wrap;
+
+}
+
+.dog {
+	display: block;
+	width: 8rem;
+	height: 8rem;
+	padding: 1rem;
+	margin: 1rem;
+	background-color: #F28F6B;
+	border-radius: 50px;
+}
+
+
+
+#targetcontainer p {
+	text-align: center;
+}
+#newtarget {
+	align-items: center;
+}
+
+#gameoverscreen h2, #points{
+	display: inline-flex;
+}
+#gameoverscreen .point, #finalplayer {
+	padding: 0 10px;
+}
+
+
+
+.btn {
+	background: white;
+  border-radius: 0.2rem;
+  padding: 1rem;
+  margin: 0.5rem;
+  border: 1px solid grey;
+	color: #F28F6B;
+} 
+
+.timerbtn {
+	padding: 0.5rem;
+	margin: 0rem;
+}
+
+/* gameoverScreen */
+h2 {
+	margin: 2rem;
+}
+
+/* Footer
+--------------------------------------------- */
